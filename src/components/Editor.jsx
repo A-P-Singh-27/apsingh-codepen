@@ -1,7 +1,5 @@
-import { Flex, Textarea } from '@chakra-ui/react'
+import { Button, Flex, Textarea } from '@chakra-ui/react'
 import { HamburgerIcon  , MinusIcon} from '@chakra-ui/icons'
-import { Box, Button } from '@mui/material'
-import React, { useState } from 'react'
 
 
 export default function Editor({title , id , onexpand , expand , run , onchange}) {

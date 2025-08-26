@@ -1,5 +1,4 @@
-import { Box } from '@mui/material'
-import { Flex, Spacer } from '@chakra-ui/react'
+import { Container, Flex, Spacer } from '@chakra-ui/react'
 import Editor from './Editor'
 import { useState , useEffect } from 'react'
 
@@ -28,7 +27,7 @@ function App() {
 
   return (
     <>
-     <Box display='flex' height='100vh' width='100vw'  flexDirection='row' padding={2} bgcolor='#2A2C2B'>
+     <Container display='flex' height='100vh' width='100vw'  flexDirection='row' padding={2} bgcolor='#2A2C2B'>
       <Flex direction='column' width='50%' height='100%' mr='10px'>
         <Editor title='HTML' id = 'html' onexpand={expandHandler} expand={expandId === 'html'} run={run}  onchange={sethtmlCont} />
         <Editor title='CSS' id = 'css' onexpand={expandHandler} expand={expandId === 'css'}  run={run} onchange={setcssCont} />
@@ -37,7 +36,7 @@ function App() {
       <Flex direction='row'  width='50%' height='100%' bg='white' borderRadius={5}>
         <iframe id='output' width='100%'/>
       </Flex>
-     </Box>
+     </Container>
     </>
   )
 }
