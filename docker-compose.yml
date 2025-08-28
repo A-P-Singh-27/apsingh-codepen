@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  react-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: codepen-app
+    ports:
+      - "80:80"         # Host port 80 → container port 80
+    restart: unless-stopped
+
